@@ -26,12 +26,21 @@ def get_status(url):
         modem_channel = int(cols[0].string.strip()[-1])
         docsis_channel = int(cols[1].string.strip())
         frequency = float(cols[2].string.strip().split()[0])
-        power = float(cols[3].string.strip().split()[0])
-        snr = float(cols[4].string.strip().split()[0])
-        modulation = cols[5].string.strip()
-        octets = int(cols[6].string.strip())
-        corrected_errors = int(cols[7].string.strip())
-        uncorrectable_errors = int(cols[8].string.strip())
+        if cols[3].string.strip() == '----':
+            channel_available = False
+            power = None
+            snr = None
+            modulation = None
+            octets = None
+            corrected_errors = None
+            uncorrectable_errors = None
+        else:
+            power = float(cols[3].string.strip().split()[0])
+            snr = float(cols[4].string.strip().split()[0])
+            modulation = cols[5].string.strip()
+            octets = int(cols[6].string.strip())
+            corrected_errors = int(cols[7].string.strip())
+            uncorrectable_errors = int(cols[8].string.strip())
         channelstats = {'modem_channel': modem_channel,
                         'dcid': docsis_channel,
                         'frequency': frequency,

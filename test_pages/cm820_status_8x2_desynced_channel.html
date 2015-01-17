@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC
+"-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Touchstone Status</title>
+	<meta http-equiv="Pragma" content="no-cache">
+        <SCRIPT language="JavaScript">
+        function clearcounters()
+        {
+            document.clear.submit();
+        }
+        </SCRIPT>
+    <link rel="stylesheet" href="/arris_style.css">
+</head>
+
+<body>
+<div class="wrapper">
+
+	<div class="header">
+	<div class="header_text">
+		<h1>Status</h1>
+	</div>
+	</div>
+
+	<div id="navbar">
+	<ul>
+	<li id="current"><a style="width: 20.00%;" href="status_cgi">Status</a></li>
+<li><a style="width: 20.00%;" href="vers_cgi">HW/FW Versions</a></li>
+<li><a style="width: 20.00%;" href="event_cgi">Event Log</a></li>
+<li><a style="width: 20.00%;" href="cm_state_cgi">CM State</a></li>
+<li><a style="width: 20.00%;" href="product_cgi">Advanced</a></li>
+
+	</ul>
+	</div>
+	
+	<div class="main_body">
+	<p>
+	<!-- INSERT ARRIS PAGE CONTENT HERE -->
+	
+<table bgcolor="#0c055c" cellpadding="0" cellspacing="0" cols="1" width="770">
+<tbody>
+<tr>
+  <td width="770"><b><font color="#ffffff" size="+1">&nbsp;RF Parameters</font></b></td>
+</tr>
+</tbody></table>
+
+
+<h4> Downstream </h4>
+<table border="2" cellpadding="0" cellspacing="0" width="770">
+<tbody>
+<tr>
+  <td></td>
+  <td>DCID</td>
+  <td>Freq</td>
+  <td>Power</td>
+  <td>SNR</td>
+  <td>Modulation</td>
+  <td>Octets</td>
+  <td>Correcteds</td>
+  <td>Uncorrectables</td>
+</tr>
+<tr><td>Downstream 1</td><td>7</td><td>765.00 MHz</td><td>1.28 dBmV</td><td>35.60 dB</td><td>256QAM</td><td>5537381141</td><td>5670</td><td>156</td></tr><tr><td>Downstream 2</td><td>6</td><td>759.00 MHz</td><td>0.94 dBmV</td><td>35.78 dB</td><td>256QAM</td><td>5224646032</td><td>6787</td><td>145</td></tr><tr><td>Downstream 3</td><td>5</td><td>753.00 MHz</td><td>0.90 dBmV</td><td>35.25 dB</td><td>256QAM</td><td>5208605209</td><td>5374</td><td>159</td></tr><tr><td>Downstream 4</td><td>8</td><td>771.00 MHz</td><td>1.35 dBmV</td><td>35.60 dB</td><td>256QAM</td><td>4904118574</td><td>4693</td><td>113</td></tr><tr><td>Downstream 5</td><td>1</td><td>729.00 MHz</td><td>1.28 dBmV</td><td>32.32 dB</td><td>256QAM</td><td>5097830657</td><td>2114817</td><td>16949</td></tr><tr><td>Downstream 6</td><td>2</td><td>735.00 MHz</td><td>1.31 dBmV</td><td>31.84 dB</td><td>256QAM</td><td>4924186672</td><td>1952809</td><td>361275</td></tr><tr><td>Downstream 7</td><td>3</td><td>741.00 MHz</td><td>----</td><td>----</td><td>----</td><td>----</td><td>----</td><td>----</td></tr><tr><td>Downstream 8</td><td>4</td><td>747.00 MHz</td><td>0.83 dBmV</td><td>35.78 dB</td><td>256QAM</td><td>5282774188</td><td>4316</td><td>92</td></tr>
+</tbody>
+</table>
+<table width="770" border="0"><tr><td align="right">
+<form name="clear" action="status_cgi" method=post>
+    <a href="javascript: clearcounters()">Reset FEC Counters</a>
+</form>
+</td></tr></table>
+<h4> Upstream </h4>
+<table border="2" cellpadding="0" cellspacing="0" width="770">
+<tbody>
+<tr>
+  <td></td>
+  <td>UCID</td>
+  <td>Freq</td>
+  <td>Power</td>
+  <td>Channel Type</td>
+  <td>Symbol Rate</td>
+  <td>Modulation</td>
+</tr>
+<tr>
+<tr><td>Upstream 1</td><td>4</td><td>25.00 MHz</td><td>44.25 dBmV</td><td>Mixed (TDMA and ATDMA)</td><td>2560 kSym/s</td><td>64QAM</td><tr><td>Upstream 4</td><td>3</td><td>30.00 MHz</td><td>45.50 dBmV</td><td>Mixed (TDMA and ATDMA)</td><td>2560 kSym/s</td><td>64QAM</td>
+</tbody>
+</table>
+
+
+<br>
+
+<table bgcolor="#0c055c" cellpadding="0" cellspacing="0" cols="1" width="770"><tbody><tr>
+
+      <td width="770"><b><font color="#ffffff"size="+1">
+&nbsp;Status
+</font></b></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0">
+<tbody><tr><td width="160">System Uptime: </td><td>6 d:  3 h: 33  m</td></tr>
+<tr><td width="160">Computers Detected:</td><td>staticCPE(0), dynamicCPE(1)
+</td></tr>
+<tr><td width="160">CM Status:</td><td>OPERATIONAL</td></tr>
+<tr><td width="160">Time and Date:</td><td>Fri 2015-01-16 23:29:13</td></tr>
+</tbody></table><br>
+<table bgcolor="#0c055c" cellpadding="0" cellspacing="0" cols="1" width="770"><tbody><tr>
+    <td width="770"><b><font color="#ffffff" size="+1">
+    &nbsp;Interface Parameters </font></b></td></tr></tbody></table><table border="2" width="769">
+  <tbody><tr>
+    <td width="100">Interface Name</td>
+    <td width="90">Provisioned</td>
+    <td width="60">State</td>
+    <td width="100">Speed (Mbps)</td>
+    <td width="144">MAC address</td></tr>
+<tr><td>LAN</td><td>Enabled</td><td>Up</td><td>1000(Full)</td><td>DE:AD:BE:EF:F0:0D</td></tr>
+</tr><tr><td>CABLE</td>
+<td>Enabled</td>
+<td>Up</td>
+<td>-----</td>
+<td>C0:FF:EE:C0:FF:EE</td>
+</tr>
+
+</tbody></table>
+	
+	<!-- END ARRIS PAGE CONTENT -->
+	</p>
+	</div> <!-- main_body -->
+
+	<div class="push"></div>
+</div> <!-- wrapper -->
+	 
+<div class="footer">
+    &#169 Copyright 2011, ARRIS Group, Inc., All rights reserved.
+</div>
+</body>
+</html>
