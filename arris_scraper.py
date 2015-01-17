@@ -9,8 +9,9 @@ import time
 
 cm_time_format = '%a %Y-%m-%d %H:%M:%S'
 
-def get_status(url):
+def get_status(baseurl):
     # Retrieve and process the page from the modem
+    url = baseurl + 'status_cgi'
     pagedata = requests.get(url).content
     timestamp = time.time() # Get the time immediately after retrieval
     bs = BeautifulSoup.BeautifulSoup(pagedata)
@@ -115,19 +116,19 @@ def get_status(url):
     
     return status
 
-def get_versions(url):
+def get_versions(baseurl):
     raise NotImplementedError()
 
-def get_eventlog(url):
+def get_eventlog(baseurl):
     raise NotImplementedError()
 
-def get_cmstate(url):
+def get_cmstate(baseurl):
     raise NotImplementedError()
 
-def get_productdetails(url):
+def get_productdetails(baseurl):
     raise NotImplementedError()
 
-def get_dhcpparams(url):
+def get_dhcpparams(baseurl):
     raise NotImplementedError()
 
 def get_qos(url):
